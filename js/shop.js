@@ -3,7 +3,7 @@ import { db } from "./firebase.js";
 import {
     collection,
     getDocs
-} from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
 
 const productsGrid = document.getElementById("productsGrid");
@@ -44,7 +44,7 @@ async function fetchProducts() {
         console.error("Error fetching products:", error);
 
         productsGrid.innerHTML = `
-            <p>Unable to load products.</p>
+            <p>Failed to load products. Please try again later.</p>
         `;
     }
 }
@@ -74,15 +74,24 @@ function displayProducts(products) {
         productCard.classList.add("product-card");
 
         productCard.innerHTML = `
-            <img src="${product.imageURL}" alt="${product.name}">
+            <img
+                src="${product.imageURL}"
+                alt="${product.name}"
+            >
 
             <h3>${product.name}</h3>
 
-            <p class="price"> R${product.price} </p>
+            <p class="price">
+                R${product.price}
+            </p>
 
-            <p> ${product.description} </p>
+            <p>
+                ${product.description}
+            </p>
 
-            <button class="btn"> Add to Cart </button>
+            <button class="btn">
+                Add to Cart
+            </button>
         `;
 
         productsGrid.appendChild(productCard);
@@ -96,29 +105,25 @@ function filterProducts() {
 
     const searchTerm = searchBar.value.toLowerCase().trim();
 
-
     const filteredProducts = allProducts.filter((product) => {
 
         const matchesCategory =
             currentCategory === "All" ||
             product.category === currentCategory;
 
-
         const matchesSearch =
             product.name.toLowerCase().includes(searchTerm) ||
             product.description.toLowerCase().includes(searchTerm);
-
 
         return matchesCategory && matchesSearch;
 
     });
 
-
     displayProducts(filteredProducts);
 }
 
 
-// Search
+// Search products
 searchBar.addEventListener("input", () => {
 
     filterProducts();
@@ -133,16 +138,13 @@ filterButtons.forEach((button) => {
 
         currentCategory = button.dataset.category;
 
-
         filterButtons.forEach((btn) => {
 
             btn.classList.remove("active");
 
         });
 
-
         button.classList.add("active");
-
 
         filterProducts();
 
@@ -151,5 +153,5 @@ filterButtons.forEach((button) => {
 });
 
 
-// Start
+// Start the application
 fetchProducts();
