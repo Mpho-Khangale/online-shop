@@ -1,0 +1,49 @@
+.shop-header{
+    text-align: center;
+    padding: 70px 10% 30px;
+}
+
+.shop-header h1{
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.shop-header p{
+    color: #666;
+}
+
+.search-section{
+    display:flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#searchBar{
+    width: 500px;
+    max-width: 90%;
+    padding:14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.filter-section{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.filter-btn{
+    padding: 10px 20px;
+    border: none;
+    background:#eee;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+.filter-btn:hover,
+.filter-btn.active{
+    background: #111;
+    color: #fff;
+}
