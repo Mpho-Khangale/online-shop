@@ -2,7 +2,7 @@ import {db} from "./firebase.js";
 
 import {collection, getDocs} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
-const productGrid = document.getElementById("productGrid");
+const productsGrid = document.getElementById("productsGrid");
 
 async function fetchProducts() {
     try {
@@ -18,7 +18,7 @@ async function fetchProducts() {
                 <p class="price">R${product.price}</p>
                 <button class="btn">Add to Cart</button>
             `;
-            productGrid.appendChild(productCard);
+            productsGrid.appendChild(productCard);
         });
     } catch (error) {
         console.error("Error fetching products:", error);
