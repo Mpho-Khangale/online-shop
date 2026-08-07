@@ -86,12 +86,15 @@ footer{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 10%;
+    padding:18px 10%;
     background:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo{
-    color:white;
+    color:#fff;
     font-size:1.8rem;
     font-weight:700;
 }
@@ -106,8 +109,130 @@ footer{
     color:white;
     text-decoration:none;
     transition:.3s;
+    font-weight: 500;
 }
 
 .nav-links a:hover{
     color:#ff4d4d;
+}
+
+.hamburger{
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+    color:white;
+    user-select:none;
+}
+
+/* ===========================
+   Tablets
+=========================== */
+
+@media (max-width:992px){
+
+    section{
+        padding:70px 7%;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+}
+
+/* ===========================
+   Phones
+=========================== */
+
+@media (max-width:768px){
+
+    .navbar{
+        padding:18px 7%;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        background:#111;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+
+        max-height:0;
+        overflow:hidden;
+
+        transition:max-height .35s ease;
+    }
+
+    .nav-links.active{
+        max-height:300px;
+        padding:20px 0;
+    }
+
+    .nav-links li{
+        margin:15px 0;
+    }
+
+    .hero{
+        height:75vh;
+        padding:0 20px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero p{
+        font-size:.95rem;
+    }
+
+    .btn{
+        padding:12px 24px;
+    }
+
+    .category-grid,
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:1.8rem;
+    }
+
+    .hero p{
+        font-size:.9rem;
+    }
+
+    h2{
+        font-size:1.6rem;
+    }
+
+    .category-card,
+    .product-card{
+        padding:25px;
+    }
+
+    .logo{
+        font-size:1.5rem;
+    }
+
 }
