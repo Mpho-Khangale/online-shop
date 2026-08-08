@@ -64,5 +64,21 @@
     font-size: .9rem;
 }
 
+#loginMessage,
+#signupMessage{
+    text-align: center;
+    font-size: .9rem;
+    min-height: 20px;
+}
 
+@media (max-width: 600px){
+    .auth-card{
+        padding: 25px;
+    }
+
+    .auth-card h1{
+        font-size: 1.6rem;
+    }
+
+}
 
