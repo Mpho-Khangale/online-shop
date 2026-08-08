@@ -3,7 +3,7 @@ import {getFirestore} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-
 import {getAuth} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAR_5sNM_gGvDkhbbTG9aSK0xorGp3EPuU",
+    apiKey: "AIzaSyAR_5sNM_gGvDkHbbTG9aSK0xorGp3EPuU",
     authDomain: "urbanthreadsstore-45857.firebaseapp.com",
     projectId: "urbanthreadsstore-45857",
     storageBucket: "urbanthreadsstore-45857.firebasestorage.app",
