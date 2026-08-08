@@ -124,6 +124,32 @@ footer{
     user-select:none;
 }
 
+.user-email{
+    color:#fff;
+    font-size:.9rem;
+}
+
+.logout-btn{
+    border:none;
+    background:#ff4d4d;
+    color:#fff;
+
+    padding:8px 15px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#e63939;
+}
+
+
 /* ===========================
    Tablets
 =========================== */
